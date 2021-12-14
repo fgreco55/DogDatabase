@@ -1,8 +1,8 @@
-package com.example.dogdatabase
+package com.example.doghistory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.dogdatabase.ui.main.MainFragment
+import com.example.doghistory.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.dogdatabase.database
+package com.example.doghistory.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

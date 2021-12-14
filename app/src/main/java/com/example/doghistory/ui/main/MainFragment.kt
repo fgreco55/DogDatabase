@@ -1,12 +1,13 @@
-package com.example.dogdatabase.ui.main
+package com.example.doghistory.ui.main
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.dogdatabase.R
+import com.example.doghistory.R
 
 class MainFragment : Fragment() {
 
@@ -20,12 +21,15 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.i("Frank", "onCreateView()...")
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        Log.i("Frank", "*****Before creating the viewModel...")
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        Log.i("Frank", "*****onActivityCreated()...")
         // TODO: Use the ViewModel
     }
 

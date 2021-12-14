@@ -1,4 +1,4 @@
-package com.example.dogdatabase.database
+package com.example.doghistory.database
 
 import android.content.Context
 import androidx.room.Database

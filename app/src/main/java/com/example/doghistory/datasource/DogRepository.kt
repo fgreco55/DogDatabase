@@ -1,8 +1,8 @@
-package com.example.dogdatabase.datasource
+package com.example.doghistory.datasource
 
 import androidx.lifecycle.LiveData
-import com.example.dogdatabase.database.DogDao
-import com.example.dogdatabase.database.DogModel
+import com.example.doghistory.database.DogDao
+import com.example.doghistory.database.DogModel
 
 class DogRepository(private val dogDao: DogDao) {
     suspend fun insertDog(dogModel: DogModel) = dogDao.insertDog(dogModel)

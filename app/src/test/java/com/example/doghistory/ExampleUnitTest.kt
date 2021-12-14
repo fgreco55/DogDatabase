@@ -1,4 +1,4 @@
-package com.example.dogdatabase
+package com.example.doghistory
 
 import org.junit.Test
 
