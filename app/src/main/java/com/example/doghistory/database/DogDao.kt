@@ -1,18 +1,15 @@
 package com.example.doghistory.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
 @Dao
 interface DogDao {
-    @Insert
-    suspend fun insertDog(dogModel: DogModel)
+    @Insert(onConflict = OnConflictStrategy.IGNORE) fun insertDog(dogModel: DogModel)
 
-    @Update
-    suspend fun updateDog(dogModel: DogModel)
+    @Update(onConflict = OnConflictStrategy.IGNORE) fun updateDog(dogModel: DogModel)
+
+    @Delete fun deleteDog(dogModel: DogModel)
 
     @Query("select * from dog_table")
     fun getAllDogs(): LiveData<List<DogModel>>

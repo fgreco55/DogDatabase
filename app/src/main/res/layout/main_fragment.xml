@@ -7,14 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <TextView
-        android:id="@+id/message"
+    <EditText
+        android:id="@+id/id_edittext"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:text="ID"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/desc_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/url_edittext"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="224dp"
+        android:text="URL"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/desc_edittext"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/desc_edittext"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:text="description"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/url_edittext"
+        app:layout_constraintStart_toStartOf="@+id/id_edittext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/update_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
+        android:layout_marginEnd="4dp"
+        android:text="Update Dog"
+        app:layout_constraintBottom_toBottomOf="@+id/add_button"
+        app:layout_constraintEnd_toEndOf="@+id/url_edittext"
+        app:layout_constraintTop_toTopOf="@+id/add_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Add Dog"
+        app:layout_constraintEnd_toStartOf="@+id/update_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/url_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/url_edittext" />
+
+    <TextView
+        android:id="@+id/database_textview"
+        android:layout_width="313dp"
+        android:layout_height="159dp"
+        android:gravity="center"
+        android:text="Results..."
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/add_button" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
